@@ -4,8 +4,83 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: brown;
+}
+
 .container {
-    width: 800px;
+    width: 1200px;
     margin: 0 auto;
     text-align: center;
+}
+
+.main_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main_section.card {
+    background-color: white;
+    border-radius: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.header_title {
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+
+.user_information {
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+    color: brown;
+    text-transform: uppercase;
+}
+
+.user_information-top {
+    display: flex;
+    flex-direction: column;
+}
+
+.user_information-top > input,
+.user_information-top > select {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 250px;
+    text-align: center;
+    border-style: none;
+    border: 1px solid brown;
+    margin-top: 20px;
+    border-radius: 5px;
+    
+}
+
+::placeholder,
+select {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.8)
+}
+
+.btn_section {
+    margin-top: 50px;
+    display: flex;
+    gap: 25px;
+}
+
+.btn_section > button {
+    line-height: 40px;
+    width: 100px;
+    font-size: 20px;
+    padding: 5px 10px;
+    background-color: white;
+    color: brown;
+    border-style: none;
+    border: 1px solid brown;
+    border-radius: 10px;
 }

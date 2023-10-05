@@ -11,7 +11,7 @@
 
 // const per calcolare i risultati
 const PREZZO_PER_KM = 0.21;
-let discount = 0;
+let discount;
 
 // const per stampare il prezzo e le informazioni 
 const finalPriceDomElement = document.querySelector('.finalPrice')
@@ -44,6 +44,8 @@ function(){
     } else if (selectDomAge == 'Option3') {
         discount = tickePrice * 0.4;
         console.log(discount)
+    } else {
+        discount = 0;
     }
 
     // calcolare il prezzo finale 
