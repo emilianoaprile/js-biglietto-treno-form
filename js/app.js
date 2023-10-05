@@ -11,9 +11,10 @@
 
 // const per calcolare i risultati
 const PREZZO_PER_KM = 0.21;
-const discount20 = 20 / 100;
-const discount40 = 40 / 100;
-const discontZero = 0;
+let discount = 0;
+
+// const per stampare il prezzo e le informazioni 
+const finalPriceDomElement = document.querySelector('.finalPrice')
 
 // calcolo del prezzo quando l'utente fa click sul btn genera
 const btnGeneraDomElement = document.getElementById('btn-genera');
@@ -22,9 +23,11 @@ function(){
     // nome del passeggero
     let inputDomUserName = document.getElementById('userName').value;
     console.log ('nome passeggero:', inputDomUserName)
+
     // numero di chilometri da percorre
     let inputDomChilometri = document.getElementById('chilometri').value;
     console.log ('distanza:', inputDomChilometri)
+
     // età del passeggero
     let selectDomAge = document.getElementById('age').value;
     console.log ('età del passeggero:', selectDomAge)
@@ -32,5 +35,22 @@ function(){
     // calcolare il prezzo base del biglietto
     const tickePrice = inputDomChilometri * PREZZO_PER_KM;
     console.log ('ticket price:', tickePrice)
-    
+
+    // calcolare l'entià dello sconto in base all'età selezionata
+    if (selectDomAge == 'Option1') {
+        discount = tickePrice * 0.2;
+        console.log(discount)
+
+    } else if (selectDomAge == 'Option3') {
+        discount = tickePrice * 0.4;
+        console.log(discount)
+    }
+
+    // calcolare il prezzo finale 
+    let finalPrice = tickePrice - discount
+        console.log(finalPrice)
+
+    // stampare il prezzo
+    finalPriceDomElement.innerHTML = '<p>' + finalPrice.toFixed(2) + '&euro;</p>'
+
 })
