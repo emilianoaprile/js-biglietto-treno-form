@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: brown;
+    background-color: #c51228;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -54,7 +54,7 @@ body {
     display: flex;
     justify-content: center;
     column-gap: 20px;
-    color: brown;
+    color: #c51228;
     text-transform: uppercase;
 }
 
@@ -71,15 +71,13 @@ body {
     width: 250px;
     text-align: center;
     border-style: none;
-    border: 1px solid brown;
+    border: 1px solid #c51228;
     margin-top: 20px;
     border-radius: 5px;
-
 }
 
 ::placeholder,
 select {
-    text-align: center;
     color: rgba(0, 0, 0, 0.8)
 }
 
@@ -95,10 +93,18 @@ select {
     font-size: 20px;
     padding: 5px 10px;
     background-color: white;
-    color: brown;
+    color: #c51228;
     border-style: none;
-    border: 1px solid brown;
+    border: 1px solid #c51228;
     border-radius: 10px;
+}
+
+.btn-style {
+    transition: all 0.3s;
+}
+
+.btn-style:hover {
+    background-color: lightgray;
 }
 
 /* Section bottom */
@@ -107,3 +113,21 @@ select {
     text-transform: uppercase;
     font-size: 20px;
 }
+
+.data-bottom {
+    margin-top: 30px;
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+    height: 150px;
+    padding-top: 20px;
+}
+
+.data-bottom > p {
+    font-size: 16px;
+}
+
+.data-bottom-title {
+    margin-bottom: 30px;
+}
+
+

@@ -14,7 +14,9 @@ const PREZZO_PER_KM = 0.21;
 let discount;
 let discountType;
 let wagonNumber = Math.floor(Math.random() * 9) + 1;
+
 let trainCode = Math.floor(Math.random() * 10000) + 90000;
+
 
 
 // const per stampare il prezzo e le informazioni 
@@ -45,7 +47,7 @@ btnGeneraDomElement.addEventListener('click',
 
         // calcolare il prezzo base del biglietto
         const tickePrice = inputDomChilometri * PREZZO_PER_KM;
-        console.log('ticket price:', tickePrice)
+        console.log('ticket price senza sconto:', tickePrice)
 
         // calcolare l'entià dello sconto in base all'età selezionata
         if (selectDomAge == 'Option1') {
@@ -64,7 +66,7 @@ btnGeneraDomElement.addEventListener('click',
 
         // calcolare il prezzo finale 
         let finalPrice = tickePrice - discount
-        console.log(finalPrice)
+        console.log('prezzo finale:', finalPrice)
 
         // stampare il prezzo
         finalPriceDomElement.innerHTML = '<p>' + finalPrice.toFixed(2) + '&euro;</p>'
@@ -74,11 +76,14 @@ btnGeneraDomElement.addEventListener('click',
 
         // stampare offerta 
         discountTypeDomElement.innerHTML = '<p>' + discountType + '</p>';
+        console.log('tipo di offerta:', discountType);
 
         // stampare numero carrozza
         passengerWagonDomElement.innerHTML = '<p>' + wagonNumber + '</p>';
+        console.log('numero vagone:', wagonNumber);
 
         // stampare codice treno 
         trainCodeDomElement.innerHTML = '<p>' + trainCode + '</p>';
+        console.log('codice treno:', trainCode);
 
     })

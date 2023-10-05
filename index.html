@@ -15,7 +15,7 @@
 
 <body>
     <div class="container">
-
+        <!-- Sezione superiore (form) START -->
         <div class="section_top">
             <h1 class="section_top-title">Calcola il prezzo del tuo biglietto</h1>
         </div>
@@ -44,43 +44,62 @@
             </div>
 
             <div class="btn_section">
-                <button id="btn-genera">Genera</button>
-                <button id="btn-annulla">Annulla</button>
+                <button class="btn-style" id="btn-genera">Genera</button>
+                <button class="btn-style" id="btn-annulla">Annulla</button>
             </div>
         </div>
-
+        <!-- Sezione superiore (form) END -->
+        
+        <!-- Informazioni stampate START -->
         <div class="printed_data">
             <div class="section_bottom">
                 <h1 class="section_bottom-title">il tuo biglietto</h1>
             </div>
 
             <div class="ticket_information card">
-                <h2 class="card_title">Passenger Details</h2>
+                <h2 class="card_title">Passenger Details:</h2>
 
                 <div class="row">
                     <div class="col-3">
-                        <h3>Nome Passeggero</h3>
-                        <p id="passenger"></p>
+                        <div class="data-bottom">
+                            <h3 class="data-bottom-title">Nome Passeggero</h3>
+                            <p id="passenger"></p>
+                        </div>
+
                     </div>
                     <div class="col-3">
-                        <h3>Offerta</h3>
-                        <p id="discountType"></p>
+                        <div class="data-bottom">
+                            <h3 class="data-bottom-title">Offerta</h3>
+                            <p id="discountType"></p>
+                        </div>
+
                     </div>
                     <div class="col-2">
-                        <h3>Carrozza</h3>
-                        <p id="wagon"></p>
+                        <div class="data-bottom">
+                            <h3 class="data-bottom-title">Carrozza</h3>
+                            <p id="wagon"></p>
+                        </div>
+
                     </div>
                     <div class="col-2">
-                        <h3>Codice CP</h3>
-                        <p id="code"></p>
+                        <div class="data-bottom">
+                            <h3 class="data-bottom-title">Codice CP</h3>
+                            <p id="code"></p>
+                        </div>
+
                     </div>
                     <div class="col-2">
-                        <h3>Costo biglietto</h3>
-                        <p class="price"></p>
+                        <div class="data-bottom">
+                            <h3 class="data-bottom-title">Costo biglietto</h3>
+                            <p class="price"></p>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
+        <!-- Informazioni stampate END -->
+
     </div>
 
 
