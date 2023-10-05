@@ -1,39 +1,36 @@
+
 // # Calcolare il prezzo del biglietto
 
 // ### chiedere il nome del passeggero
-// - creare un input nell'HTML
-// - prendere l'input dal DOM
-const inputDomUserName = document.getElementById('userName')
-console.log('Nome e cognome del passeggero:', inputDomUserName)
 // ### chiedere il numero di km da percorrere
-// - creare un input nell'HTML
-// - prendere l'input dal DOM
-const inputDomChilometri = document.getElementById('chilometri')
-console.log('chilometri da percorrere:', inputDomChilometri)
 // ### chiedere l'età del passeggero
-// - creare un input select nell'HTML
-// - prendere l'input select dal DOM
-const selDomUserAge = document.getElementById('age')
-console.log('Età del passeggero:', selDomUserAge)
-
-// ### creare un button genera e annulla
-// - inserire i tag button nell'HTML
-// - prendere i button dal DOM
-const btnGeneraDomElement = document.getElementById('btn-genera')
-const btnAnnullaDomElement = document.getElementById('btn-annulla')
 // ### definire il prezzo base del biglietto
-// - creare un 
-// - prendere la classe dal DOM
-const finalPrice = document.querySelector('.finalPrice') 
-console.log('Prezzo base del biglietto:', finalPrice)
-
-
 // ### calcolare l'entità dello sconto
-// ### calcolare il prezzo finale del biglietto
+// ### calcolare il prezzo finale del biglietto con o senza sconto
 // ### stampare il risultato delle informazioni che l'utente ha inserito
-// - creare un operazione nella quale faremo i calcoli che avverranno all'evento "click" e stamperà il risultato
 
-btnGeneraDomElement.addEventListener('click', function () {
-    // recupero i valori degli input
-    console.log(selDomUserAge.value)
+// const per calcolare i risultati
+const PREZZO_PER_KM = 0.21;
+const discount20 = 20 / 100;
+const discount40 = 40 / 100;
+const discontZero = 0;
+
+// calcolo del prezzo quando l'utente fa click sul btn genera
+const btnGeneraDomElement = document.getElementById('btn-genera');
+btnGeneraDomElement.addEventListener('click',
+function(){
+    // nome del passeggero
+    let inputDomUserName = document.getElementById('userName').value;
+    console.log ('nome passeggero:', inputDomUserName)
+    // numero di chilometri da percorre
+    let inputDomChilometri = document.getElementById('chilometri').value;
+    console.log ('distanza:', inputDomChilometri)
+    // età del passeggero
+    let selectDomAge = document.getElementById('age').value;
+    console.log ('età del passeggero:', selectDomAge)
+
+    // calcolare il prezzo base del biglietto
+    const tickePrice = inputDomChilometri * PREZZO_PER_KM;
+    console.log ('ticket price:', tickePrice)
+    
 })
