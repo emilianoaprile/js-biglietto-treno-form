@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
+    <link rel="stylesheet" href="./css/app.css">
+    <title>Biglietto del treno</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1 class="header_title">Calcola il prezzo del tuo biglietto</h1>
+        </header>
+
+        <main class="main_section">
+            <section class="user_information">
+
+                <div class="user_information-top">
+                    <label for="userName">Nome Cognome</label>
+                    <input type="text" id="userName" placeholder="Inserisci il tuo nome e cognome">
+                </div>
+
+                <div class="user_information-top">
+                    <label for="chilometri">Km da percorrere</label>
+                    <input type="text" id="chilometri" placeholder="Inserisci la distanza da percorrere">
+                </div>
+
+                <div class="user_information-top">
+                    <label for="eta">Fascia d'età</label>
+                    <select name="eta" id="age">
+                        <option value="0">Minorenne</option>
+                        <option value="1">Maggiorenne</option>
+                        <option value="2">Over 65</option>
+                    </select>
+                </div>
+
+
+
+
+
+
+                <div class="btn_top-section">
+                    <button class="genera">Genera</button>
+                    <button class="annulla">Annulla</button>
+                </div>
+
+                <div class="finalPrice"></div>
+
+
+
+            </section>
+
+        </main>
+    </div>
+
+
+    <!-- Javascript -->
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
